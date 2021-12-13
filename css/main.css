@@ -12,13 +12,34 @@
     --Poppins: "Poppins",cursive;
     --Roboto: "Roboto",cursive;
     --gradient: linear-gradient((120deg,#ff00f7 10%,#00d0ff));
-    --light-gray: rgba(255,255,255,0.7);
+    --light-gray: rgba(211, 211, 211, 0.082);
     --Pinkish: rgb(255, 11, 133);
 }
 
 a{
     text-decoration: none;
 }
+
+#main .sub-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(120deg,  #ff00f7 0%,#00d0ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 5px;
+}
+
+#main .title{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 5px;
+}
+
+#main .title-text{
+    line-height: 1.8rem;
+    padding-bottom: 1.5rem;
+}
+
 
 /* ./Global styling */
 
@@ -104,7 +125,6 @@ header .row .hero-title{
     flex-wrap: wrap;
 }
 
-
 header .cards{
     margin-top: 2rem;
 }
@@ -117,12 +137,11 @@ header .cards .card{
     border: none;
 }
 
-header .cards .card .icon{
-    color: var(--Pinkish);
-    font-weight: lighter;
+header .cards .card .card-body img{
+    padding-bottom: 20px;
 }
 
-header .cards .card h5{
+header .cards .card .card-info h5{
     font-weight: bold;
 }
 /* Header section styling */
@@ -131,7 +150,7 @@ header .cards .card h5{
 
 /* about section */
 #main .about{
-    padding: 10rem 0rem;
+    padding: 5rem 0rem;
     position: relative;
 }
 
@@ -153,21 +172,15 @@ header .cards .card h5{
     width: 300px;
     border-radius: 20px;
     position: absolute;
-    bottom: 28%;
+    bottom: 120px;
     left: 0;
     z-index: -1;
     
 }
 
-#main .about .about-info>.icon{
-    color: #fff;
-    background: var(--Pinkish);
-    font-size: 2rem;
-    border-radius: 50px;
-    /* width: 50px; */
-    /* height: 50px; */
-    padding: 1.4rem 1.4rem;
-    margin-bottom: 1.4rem;
+#main .about .about-info>.img{
+    width: 50px;
+    padding-bottom: 10px;
 }
 
 #main .about .about-info .h1{
@@ -197,5 +210,142 @@ header .cards .card h5{
     background: linear-gradient(120deg,  #ff00f7 40%,#00d0ff );
 }
 /* about section */
+
+/* services section */
+#main .services{
+    background-color: var(--light-gray);
+    border-radius: 20px;
+    padding: 5rem 0rem;
+}
+
+#main .services .cards .card{
+    background: none;
+    width: 18rem;
+    margin: 10px;
+    border: none;
+    text-align: left;
+    background: #fff;
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+#main .services .card .h5{
+    padding: 10px 0 0 0;
+}
+
+#main .services .card .icon-1{
+    color: #a9818f;
+}
+
+#main .services .card .icon-2{
+    color: #5e99bc;
+}
+
+#main .services .card .icon-3{
+    color: #80bfb5;
+}
+
+#main .services .card .icon-4{
+    color: #90c2ab;
+}
+
+#main .services .card .icon-5{
+    color: #766c8b;
+}
+
+#main .services .card .icon-6{
+    color: #95b7d7;
+}
+/* .//services section */
+
+/* projects section */
+#main .projects{
+    padding: 5rem 0;
+}
+
+#main .projects .card{
+    border: none;
+    text-align: left;
+    margin: 1rem .5rem;
+    cursor: pointer;
+}
+
+#main .projects .card .card-img{
+    max-width: 350px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#main .projects .card .card-img .img{
+    width: 350px;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: transform .4s ease;
+}
+
+#main .projects .card .card-img .img:hover{
+    transform: scale(1.03);
+}
+
+#main .projects .card .card-body{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    line-height: 0;
+    transition: bottom .6s ease;
+}
+
+#main .projects .card:hover .card-body{
+    bottom: 10px;
+} 
+
+#main .projects .card .card-body .h5{
+    font-size: 30px;
+    font-weight: 600;
+}
+/* .//projects section */
+
+/* Company section */
+#main .company{
+    background-color: var(--light-gray);
+    padding: 5rem 0rem;
+    border-radius: 20px;
+}
+
+#main .company .cards .card{
+    background: none;
+    width: 14rem;
+    margin: 7px;
+    border: none;
+    background: #fff;
+    padding: 20px 3px;
+    border-radius: 10px;
+}
+
+#main .company .cards .card .icon{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#main .company .cards .card .icon-1{
+    color: rgba(218, 13, 54, 0.548);
+}
+
+#main .company .cards .card .icon-2{
+    color: rgba(105, 200, 231, 0.842);
+}
+
+#main .company .cards .card .icon-3{
+    color: rgba(245, 165, 16, 0.836);
+}
+
+#main .company .cards .card .icon-4{
+    color: rgba(72, 221, 72, 0.808);
+}
+
+
+/* .//Company section */
 
 /* .//MAIN SECTION */
