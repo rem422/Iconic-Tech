@@ -20,6 +20,34 @@ a{
     text-decoration: none;
 }
 
+.btn{
+    margin-left: 1.5em;
+    border-radius: 50px;
+    padding: 10px 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 0%;
+    height: 100%;
+    border-radius: 50px;
+    background: -webkit-linear-gradient(120deg,  #ff00f7 10%,#00d0ff);
+    opacity: .8;
+    z-index: -1;
+    transition: .5s ease-in-out;
+}
+
+.btn:hover::before{
+    width: 100%;
+    left: 0;
+}
+
 #main .sub-title{
     font-size: 1.3rem;
     font-weight: 600;
@@ -80,34 +108,6 @@ header .nav-link:hover{
     background: -webkit-linear-gradient(120deg,  #ff00f7 10%,#00d0ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-header .navbar-nav .btn{
-    margin-left: 1.5em;
-    border-radius: 50px;
-    padding: 10px 30px;
-    position: relative;
-    overflow: hidden;
-    z-index: 999;
-}
-
-header .btn::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 0%;
-    height: 100%;
-    border-radius: 50px;
-    background: -webkit-linear-gradient(120deg,  #ff00f7 10%,#00d0ff);
-    opacity: .8;
-    z-index: -1;
-    transition: .5s ease-in-out;
-}
-
-header .btn:hover::before{
-    width: 100%;
-    left: 0;
 }
 
 header .row{
@@ -344,8 +344,143 @@ header .cards .card .card-info h5{
 #main .company .cards .card .icon-4{
     color: rgba(72, 221, 72, 0.808);
 }
-
-
 /* .//Company section */
 
+/* Testimonials section */
+
+#main .testimonials{
+    padding: 5rem 0rem;
+}
+
+#main .testimonials .testimonial-info{
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+#main .testimonials .testimonial-info::before{
+    content: "\f10d";
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Font Awesome 5 Free"; font-weight: 900;
+    font-size: 100px;
+    color: lightgray;
+    opacity: .4;
+    z-index: -1;
+}
+
+#main .testimonials .testimonial-info .text{
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 2rem;
+}
+
+#main .testimonials .testimonial-info .text-2{
+    font-size: .9rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+#main .testimonials .testimonial-info .text-2>span{
+    font-weight: bold;
+    color: rgba(218, 13, 54, 0.548);
+}
+
+#main .testimonials .testimonial-img img{
+    width: 150px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 10px;
+    filter:  grayscale(.8);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#main .testimonials .testimonial-img img:hover{
+    filter:  grayscale(0);
+    transform: scale(1.05);
+}
+/* .//Testimonials section */
+
+/* News section */
+#main .news{
+    background-color: var(--light-gray);
+    padding: 5rem 0rem;
+    border-radius: 20px;
+}
+
+#main .news .card{
+    border: none;
+    text-align: left;
+    margin: 1rem .5rem;
+    cursor: pointer;
+}
+
+#main .news .card .card-img{
+    max-width: 350px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#main .news .card .card-img .img{
+    width: 350px;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: transform .4s ease;
+}
+
+#main .news .card .card-img .img:hover{
+    transform: scale(1.03);
+}
+
+#main .news .card .card-body{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    line-height: 0;
+    transition: bottom .6s ease;
+}
+
+#main .news .card:hover .card-body{
+    bottom: 10px;
+} 
+
+#main .news .card .card-body .h5{
+    font-size: 22px;
+    font-weight: 600;
+}
+/* .//News section */
+
+/* Brands section */
+#main .brands{
+    padding: 5rem 0rem;
+}
+
+#main .brands .cards{
+    padding: 2rem 0;
+}
+
+#main .brands .card{
+    border: none;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+#main .brands .card .img{
+    width: 150px;
+    height: 100%;
+    filter: grayscale(1);
+    transition: filter .3s ease;
+}
+
+#main .brands .card .img:hover{
+    filter: grayscale(0);
+}
+/* .//Brands section */
 /* .//MAIN SECTION */
