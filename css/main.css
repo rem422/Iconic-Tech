@@ -1,3 +1,6 @@
+/* Web Responsivenes */
+@import url('../css/mobile-style.css');
+
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
@@ -7,13 +10,17 @@
     margin: 0;
 }
 
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 /* Global styling */
 :root{
     --Poppins: "Poppins",cursive;
     --Roboto: "Roboto",cursive;
     --gradient: linear-gradient((120deg,#ff00f7 10%,#00d0ff));
     --light-gray: rgba(211, 211, 211, 0.082);
-    --Pinkish: rgb(255, 11, 133);
 }
 
 a{
@@ -21,9 +28,9 @@ a{
 }
 
 .btn{
-    margin-left: 1.5em;
+    margin-left: 1.5rem;
     border-radius: 50px;
-    padding: 10px 30px;
+    padding: 5px 15px;
     position: relative;
     overflow: hidden;
     z-index: 999;
@@ -48,6 +55,16 @@ a{
     left: 0;
 }
 
+.card{
+    box-shadow: 0px 0px 8px 0 #0000002c;
+    transition: box-shadow .4s ease;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 3px 0 #0000002c;
+    transition: box-shadow .3s ease;
+}
+
 #main .sub-title{
     font-size: 1.3rem;
     font-weight: 600;
@@ -67,8 +84,6 @@ a{
     line-height: 1.8rem;
     padding-bottom: 1.5rem;
 }
-
-
 /* ./Global styling */
 
 
@@ -93,6 +108,25 @@ header::after{
     z-index: -1;
 }
 
+
+header .navbar-toggler,
+.navbar-toggler,
+.navbar-toggler-icon{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: white;
+}
+
+header .navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
 header .nav-item{
     padding-right: .7em;
     align-self: center;
@@ -110,19 +144,24 @@ header .nav-link:hover{
     -webkit-text-fill-color: transparent;
 }
 
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 header .row{
+    width: 100%;
+    margin: auto;
     padding: 8vmin 0;
+    flex-wrap: wrap;
 }
 
 header .row .hero-title{
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 800;
     letter-spacing: .6rem;
     background: -webkit-linear-gradient(120deg,  #ff00f7 10%,#00d0ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    width: 100%;
-    flex-wrap: wrap;
 }
 
 header .cards{
@@ -133,8 +172,9 @@ header .cards .card{
     background: none;
     width: 20rem;
     margin-top: 30px;
-    margin: 10px;
+    margin:0rem 10px;
     border: none;
+    box-shadow: none;
 }
 
 header .cards .card .card-body img{
@@ -173,7 +213,7 @@ header .cards .card .card-info h5{
     border-radius: 20px;
     position: absolute;
     bottom: 120px;
-    left: 0;
+    left: 100px;
     z-index: -1;
     
 }
@@ -214,7 +254,6 @@ header .cards .card .card-info h5{
 /* services section */
 #main .services{
     background-color: var(--light-gray);
-    border-radius: 20px;
     padding: 5rem 0rem;
 }
 
@@ -234,27 +273,27 @@ header .cards .card .card-info h5{
 }
 
 #main .services .card .icon-1{
-    color: #a9818f;
+    color: rgba(218, 13, 54, 0.548);
 }
 
 #main .services .card .icon-2{
-    color: #5e99bc;
+    color: #3485c7;
 }
 
 #main .services .card .icon-3{
-    color: #80bfb5;
+    color: rgba(115, 255, 225, 0.842);
 }
 
 #main .services .card .icon-4{
-    color: #90c2ab;
+    color: #70fcba;
 }
 
 #main .services .card .icon-5{
-    color: #766c8b;
+    color: #9671b9;
 }
 
 #main .services .card .icon-6{
-    color: #95b7d7;
+    color: #0060b9;
 }
 /* .//services section */
 
@@ -265,6 +304,7 @@ header .cards .card .card-info h5{
 
 #main .projects .card{
     border: none;
+    box-shadow: none !important;
     text-align: left;
     margin: 1rem .5rem;
     cursor: pointer;
@@ -311,7 +351,6 @@ header .cards .card .card-info h5{
 #main .company{
     background-color: var(--light-gray);
     padding: 5rem 0rem;
-    border-radius: 20px;
 }
 
 #main .company .cards .card{
@@ -418,6 +457,7 @@ header .cards .card .card-info h5{
     text-align: left;
     margin: 1rem .5rem;
     cursor: pointer;
+    box-shadow: none !important;
 }
 
 #main .news .card .card-img{
@@ -470,6 +510,7 @@ header .cards .card .card-info h5{
     border: none;
     margin: 2rem;
     cursor: pointer;
+    box-shadow: none !important;
 }
 
 #main .brands .card .img{
@@ -484,3 +525,58 @@ header .cards .card .card-info h5{
 }
 /* .//Brands section */
 /* .//MAIN SECTION */
+
+/* Footer Section */
+#footer{
+    background: #000;
+    padding: 3rem 0;
+}
+
+#footer .container hr{
+    color: #fff;
+    margin: 2.5rem 0rem;
+}
+
+#footer .container .footer-header{
+    align-items: center;
+}
+
+#footer .container .footer-header .h2{
+    color: #fff;
+    font-weight: bolder;
+}
+
+#footer .container .footer-header .btn{
+    height: 100%;
+}
+
+#footer .container .row .col-md-2 .links>a{
+    color: darkgray;
+    display: block;
+    padding-top: 1rem;
+}
+
+#footer .container .row .col-md-4 .footer-icon{
+    padding-bottom: 8rem;
+}
+
+#footer .container .row .col-md-4 .contact>span{
+    color: darkgray;
+    display: block;
+    padding-top: 1rem;
+}
+
+#footer .row .col-md-4 .social a{
+    color: darkgray;
+    padding-right: 1.5rem;
+}
+
+#footer .container .row .col-md-4>p{
+    color: darkgray;
+}
+/* .//Footer Section */
+
+
+
+
+
