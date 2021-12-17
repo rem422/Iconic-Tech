@@ -125,7 +125,9 @@ header .navbar-toggler:focus,
     box-shadow: none;
 }
 
-
+header .navbar{
+    transition: all.3s ease;
+}
 
 header .nav-item{
     padding-right: .7em;
