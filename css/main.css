@@ -91,7 +91,7 @@ a{
 header{
     background: url("/assets/header-bg.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     position: relative;
     z-index: 999;
 }
